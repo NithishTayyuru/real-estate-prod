@@ -11,7 +11,7 @@ const Layout = ({children}:{children:React.ReactNode}) => {
     const pathname = usePathname();
     const [isLoading, setIsLoading] = useState(true);
   
-  useEffect(() => {
+  /*useEffect(() => {
       if (authUser) {
         const userRole = authUser.userRole?.toLowerCase();
         if (
@@ -28,7 +28,7 @@ const Layout = ({children}:{children:React.ReactNode}) => {
       }
     }, [authUser, router, pathname]);
   
-    if (authLoading || isLoading) return <>Loading...</>;
+    if (authLoading || isLoading) return <>Loading...</>;*/
     
   
   return (
