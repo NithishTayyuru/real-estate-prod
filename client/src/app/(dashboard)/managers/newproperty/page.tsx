@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
+
 const NewProperty = () => {
   const [createProperty] = useCreatePropertyMutation();
   const { data: authUser } = useGetAuthUserQuery();
@@ -59,8 +60,7 @@ const NewProperty = () => {
 
     formData.append("managerCognitoId", authUser.cognitoInfo.userId);
 
-  
-
+    await createProperty(formData);
   };
 
   return (
