@@ -21,9 +21,7 @@ const HeroSection = () => {
       const response = await fetch(
         `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
           trimmedQuery
-        )}.json?access_token=${
-          process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
-        }&fuzzyMatch=true`
+        )}.json?access_token=${process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}&fuzzyMatch=true`
       );
 
       const data = await response.json();
@@ -83,7 +81,8 @@ const HeroSection = () => {
             />
             <Button 
               onClick={handleLocationSearch} 
-              className='bg-[#eb8686] text-white rounded-none rounded-r-xl border-none hover:bg-[#e45a5a] h-12'>
+              className='bg-[#eb8686] text-white rounded-none rounded-r-xl border-none hover:bg-[#e45a5a] h-12'
+            >
               Search
             </Button>
           </div>
